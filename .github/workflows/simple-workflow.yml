@@ -2,19 +2,16 @@ name: Simple Workflow
 
 on: 
   schedule:
-    - cron 0 1-23 * * *
+    - cron: '0 * * * *'
   
-  workflow_dispatch
+   # workflow_dispatch:
  
 jobs:
-  test:
+  main_job:
     runs-on: ubuntu-latest
-    name: Run unit tests on Java 8
+    name: Get source code
     steps:
-      - uses: actions/checkout@master
-      - name: Setup java
-        uses: actions/setup-java@v4.5.0
-        with:
-          java-version: 8
-          distribution: zulu
-      - run: mvn -f pom.xml test
+      - name: Set source code
+      - run: echo 'Récuperation du code source'
+      - name: Check finished
+      - run: echo 'Vérification terminée'
