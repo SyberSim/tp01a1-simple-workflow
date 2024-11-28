@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get source code
-      - run: echo 'Récuperation du code source'
+        run: echo 'Récuperation du code source'
       - name: Checkout
       - uses: actions/checkout@v4.2.2
       - name: Check finished
-      - run: echo 'Vérification terminée'
+        run: echo 'Vérification terminée'
